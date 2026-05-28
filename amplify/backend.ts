@@ -37,7 +37,7 @@ backend.addOutput({
         //@ts-expect-error amplify backend type issue https://github.com/aws-amplify/amplify-backend/issues/2569
         paths: {
           // "public/*": {
-          "/*": {
+          "": {
             guest: ["get", "list"],
             // authenticated: ["get", "list", "write", "delete"],
             authenticated: ["get", "list"],
