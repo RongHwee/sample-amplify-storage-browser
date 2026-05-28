@@ -34,7 +34,6 @@ backend.addOutput({
         name: "claims-maid-dev",
         bucket_name: "claims-maid-dev",
         aws_region: "ap-southeast-1",
-        //@ts-expect-error amplify backend type issue https://github.com/aws-amplify/amplify-backend/issues/2569
         paths: {
           // "public/*": {
           "": {
