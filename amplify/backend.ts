@@ -27,20 +27,23 @@ const customBucketName = "my-existing-bucket";
 backend.addOutput({
   version: "1.3",
   storage: {
-    aws_region: "us-east-1",
-    bucket_name: customBucketName,
+    aws_region: "ap-southeast-1",
+    bucket_name: claims-maid-dev,
     buckets: [
       {
-        name: customBucketName,
-        bucket_name: customBucketName,
+        name: claims-maid-dev,
+        bucket_name: claims-maid-dev,
         aws_region: "us-east-1",
         //@ts-expect-error amplify backend type issue https://github.com/aws-amplify/amplify-backend/issues/2569
         paths: {
-          "public/*": {
+          // "public/*": {
+          "/*": {
             guest: ["get", "list"],
-            authenticated: ["get", "list", "write", "delete"],
+            // authenticated: ["get", "list", "write", "delete"],
+            authenticated: ["get", "list"],
           },
-          "admin/*": {
+          // "admin/*": {
+          "admin/*": {  
             groupsadmin: ["get", "list", "write", "delete"],
             authenticated: ["get", "list", "write", "delete"],
           },
