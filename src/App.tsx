@@ -17,10 +17,10 @@ const { StorageBrowser } = createStorageBrowser({
 function App() {
   return (
     <Authenticator>
-      {({ signOut}) => (
+      {({ signOut,user}) => (
         <>
           <Flex direction="row" alignItems="center" wrap="nowrap" gap="1rem">
-            <Heading level={4}>{`Welcome to S3 Browser`}</Heading>
+            <Heading level={4}>{`Hello ${user?.emailaddress}`}</Heading>
             <Button onClick={signOut}>Sign out</Button>
           </Flex>
           <StorageBrowser />
