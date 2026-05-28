@@ -43,10 +43,10 @@ backend.addOutput({
             authenticated: ["get", "list"],
           },
           // "admin/*": {
-          "admin/*": {  
-            groupsadmin: ["get", "list", "write", "delete"],
-            authenticated: ["get", "list", "write", "delete"],
-          },
+          //"admin/*": {  
+            //groupsadmin: ["get", "list", "write", "delete"],
+            //authenticated: ["get", "list", "write", "delete"],
+          //},
         },
       },
     ],
